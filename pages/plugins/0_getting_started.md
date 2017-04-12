@@ -1,6 +1,6 @@
 ---
 title: Mapbox Services
-path: /plugins/
+path: /mapbox-plugins/
 ---
 
 
