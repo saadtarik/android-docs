@@ -58,6 +58,7 @@ module.exports = React.createClass({
   render() {
     const mapSdkActive = includes(this.props.location.pathname, '/map-sdk/');
     const mapboxJavaActive = includes(this.props.location.pathname, '/mapbox-services/');
+    const pluginsActive = includes(this.props.location.pathname, '/plugins/');
     const examplesActive = includes(this.props.location.pathname, '/examples/');
     var activeTitle;
     let { queryMatches, showNav } = this.state;
@@ -101,6 +102,7 @@ module.exports = React.createClass({
         <div className={`align-t hmin48 flex-parent-inline flex-parent--center-cross flex-parent--left-main ${queryMatches.desktop ? 'w240' : ''}`}><a href={'https://mapbox.com/'}><div className={queryMatches.desktop ? 'ml12 mb-logo--s mb-logo--white' : ''}/></a></div>
         <Link className={`py12 transition btn color-white bg-transparent bg-darken10-on-active bg-darken10-on-hover txt-s  ${mapSdkActive ? 'is-active' : ''}`} to={prefixLink('/map-sdk/5.0.1/getting-started/')}>Map SDK</Link>
         <Link className={`py12 transition btn color-white bg-transparent bg-darken10-on-active bg-darken10-on-hover txt-s  ${mapboxJavaActive ? 'is-active' : ''}`} to={prefixLink('/mapbox-services/2.0.0/getting-started/')}>Mapbox Services</Link>
+        <Link className={`py12 transition btn color-white bg-transparent bg-darken10-on-active bg-darken10-on-hover txt-s  ${pluginsActive ? 'is-active' : ''}`} to={prefixLink('/mapbox-plugins/')}>Mapbox Plugins</Link>
         <Link className={`py12 transition btn color-white bg-transparent bg-darken10-on-active bg-darken10-on-hover txt-s  ${examplesActive ? 'is-active' : ''}`} to={prefixLink('/examples/basics/')}>Examples</Link>
         </div>
         {queryMatches.tablet && <div>
