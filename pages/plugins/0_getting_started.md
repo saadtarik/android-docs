@@ -3,6 +3,7 @@ title: Mapbox Plugins
 path: /mapbox-plugins/
 ---
 
+<br>
 
 ### Available plugins
 
@@ -12,7 +13,8 @@ These are the plugins currently available:
 
 1. [Traffic. Adds a traffic layer to any Mapbox basemap.](https://github.com/mapbox/mapbox-plugins-android/issues/4)
 
-![ezgif com-video-to-gif 15](https://cloud.githubusercontent.com/assets/2151639/24789419/46161ff8-1b73-11e7-8c58-264ccce16f2f.gif)
+![ezgif com-crop](https://cloud.githubusercontent.com/assets/4394910/24972279/bf88b170-1f6f-11e7-8638-6afe08369d9d.gif)
+
 
 ### Installing plugins with Maven & Gradle
 
@@ -40,10 +42,10 @@ And `$> export IS_LOCAL_DEVELOPMENT=false` if you want same behavior as before. 
 
 
 
-## Contributing a plugin
+### Contributing a plugin
 
 
-We welcome contributions to [our plugin GitHub repository](https://github.com/mapbox/mapbox-plugins-android)! If you're interested in building and sharing your own, please follow these steps:
+We welcome contributions to [our plugin repository](https://github.com/mapbox/mapbox-plugins-android)! If you're interested in building and sharing your own, please follow these steps:
 
 1. [Open a ticket](https://github.com/mapbox/mapbox-plugins-android/issues) to kick off a conversation and feel free to tag the `@mapbox/android` team. It's a good idea to explain your plans before you push any code to make sure no one else is working on something similar and to discuss the best approaches to tackle your particular idea.
 
