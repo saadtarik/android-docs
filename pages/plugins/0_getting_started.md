@@ -1,21 +1,70 @@
 ---
-title: Mapbox Services
+title: Mapbox Plugins
 path: /mapbox-plugins/
 ---
 
 
 ### Available plugins
 
+Plugins are single-purpose libraries built on top of the Mapbox Android SDK that you can include in your apps like any other Android library.
 
-### How to install plugins via Maven/Gradle
+These are the plugins currently available:
+
+1. [Traffic. Adds a traffic layer to any Mapbox basemap.](https://github.com/mapbox/mapbox-plugins-android/issues/4)
+
+![ezgif com-video-to-gif 15](https://cloud.githubusercontent.com/assets/2151639/24789419/46161ff8-1b73-11e7-8c58-264ccce16f2f.gif)
+
+### Installing plugins with Maven & Gradle
+
+
+Set `IS_LOCAL_DEVELOPMENT` gradle property to `true` (is `false` by default)
+`$> gradlew uploadArchives`
+`aar` or `jar` will be automatically installed in your Maven local repo folder (`.m2/M2_HOME`)
+Remember to add `mavenLocal()` in `repositories{}` (`build.gradle`) in the project in which you'd like to use Maven local repository
 
 
 
-### How to use plugins
+
+
+Now if you want to install `aars` or `jars` in your Maven local repository you should define `IS_LOCAL_DEVELOPMENT` environment variable like this:
+
+`$> export IS_LOCAL_DEVELOPMENT=true`
+
+And `$> export IS_LOCAL_DEVELOPMENT=false` if you want same behavior as before. If `IS_LOCAL_DEVELOPMENT` is not exported also works as before.
 
 
 
-## How to contribute a plugin
+### Using plugins
 
-View [our plugin repo](https://github.com/mapbox/mapbox-plugins-android)
+
+
+
+
+## Contributing a plugin
+
+
+We welcome contributions to [our plugin GitHub repository](https://github.com/mapbox/mapbox-plugins-android)! If you're interested in building and sharing your own, please follow these steps:
+
+1. [Open a ticket](https://github.com/mapbox/mapbox-plugins-android/issues) to kick off a conversation and feel free to tag the `@mapbox/android` team. It's a good idea to explain your plans before you push any code to make sure no one else is working on something similar and to discuss the best approaches to tackle your particular idea.
+
+1. Create a new branch that will contain the code for your plugin.
+
+1. Create a new Android library module inside the `plugins` project with Android Studio. Each plugin is a separate library that depends on the Mapbox Android SDK and potentially on other third-party libraries. Besides the code for the plugin, make sure you include:
+
+  - Tests.
+  - Javadoc that documents the plugin usage and purpose in detail.
+
+1. Create a new activity inside the demo app that showcases how to use your plugin. As important as having a working plugin is to  show how to use it so that anyone can include it in their projects easily.
+
+1. Finally, once you're ready to share your code, list your plugin in this file and then open a pull request for the `@mapbox/android` team to review.
+
+Please note that a plugin is simply a library module built on top of the Mapbox Android SDK. For now, we are not requiring plugins to register themselves or to implement any specific interfaces. This might change in the future as we build more plugins and learn how developers are use them. We'd love to [hear your ideas](https://github.com/mapbox/mapbox-plugins-android/issues).
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
